@@ -1,0 +1,15 @@
+<div class="login-page">
+  <div class="form">
+    <form class="login-form">
+      <input type="text" placeholder="login" [(ngModel)]=loginData name="login" maxlength="7"/>
+      <button (click)="login()">login</button>
+      <p class="message">Not registered? <a (click)="navigateRegister()">Create an account</a></p>
+    </form>
+  </div>
+  <div class="modal-overlay" *ngIf="showErrorModal">
+    <div class="modal modal-error">
+      <button class="modal-close" (click)="showErrorModal = false">✕</button>
+      <h2>❌ Erro</h2>
+      <p>{{ errorMessage }}</p>
+    </div>
+  </div>

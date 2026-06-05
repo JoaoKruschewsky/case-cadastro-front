@@ -1,0 +1,102 @@
+<div class="login-page">
+  <div class="form">
+    <form class="register-form">
+      <input
+        type="text"
+        placeholder="Nome"
+        [(ngModel)]="user.name"
+        name="name"
+      />
+      <input
+        type="email"
+        placeholder="Email"
+        [(ngModel)]="user.email"
+        name="email"
+      />
+      <input
+        type="text"
+        placeholder="CPF"
+        inputmode="numeric"
+        [(ngModel)]="user.cpf"
+        mask="00000000000"
+        maxlength="11"
+        name="cpf"
+      />
+      <p>Data de Nascimento</p>
+      <input
+        type="date"
+        placeholder="Data de Nascimento"
+        [(ngModel)]="user.dataNascimento"
+        [max]="today"
+        name="date"
+      />
+      <input
+        type="text"
+        placeholder="CEP"
+        mask="00000000"
+        name="cep"
+        [(ngModel)]="cep"
+        maxlength="9"
+      />
+      <button (click)="buscarCep()" class="buttonCep">Buscar cep</button>
+      <input
+        type="text"
+        placeholder="Logradouro"
+        [(ngModel)]="address.logradouro"
+        name="logradouro"
+        [readOnly]="!cepFound"
+      />
+      <input
+        type="text"
+        placeholder="Bairro"
+        [(ngModel)]="address.bairro"
+        name="bairro"
+        [readOnly]="!cepFound"
+      />
+      <input
+        type="text"
+        placeholder="Estado"
+        [(ngModel)]="address.estado"
+        name="estado"
+        [readOnly]="!cepFound"
+      />
+      <input
+        type="text"
+        placeholder="UF"
+        [(ngModel)]="address.uf"
+        name="uf"
+        [readOnly]="!cepFound"
+      />
+
+      <button (click)="save()" type="button" class="buttonCreate">
+        create
+      </button>
+
+      <p class="message">Already registered? <a (click)="pageLogin()">Sign In</a></p>
+    </form>
+  </div>
+
+  <div class="modal-overlay" *ngIf="showModal">
+    <div class="modal">
+      <button class="modal-close" (click)="showModal = false">✕</button>
+      <h2>✅ Cadastro realizado!</h2>
+      <p>Login gerado com sucesso:</p>
+      <strong>{{ loginGerado }}</strong>
+      <p class="countdown">Redirecionando em {{ countdown }}s...</p>
+    </div>
+
+  </div>
+  <div class="modal-overlay" *ngIf="showErrorModal">
+    <div class="modal modal-error">
+      <button class="modal-close" (click)="showErrorModal = false">✕</button>
+      <h2>❌ Erro</h2>
+      <p>{{ errorMessage }}</p>
+    </div>
+  </div>
+
+
+</div>
+
+
+
+

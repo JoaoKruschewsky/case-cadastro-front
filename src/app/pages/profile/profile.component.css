@@ -1,0 +1,73 @@
+@import url(https://fonts.googleapis.com/css?family=Roboto:300);
+
+.login-page {
+  width: 360px;
+  padding: 8% 0 0;
+  margin: auto;
+}
+.form {
+  position: relative;
+  z-index: 1;
+  background: #FFFFFF;
+  max-width: 360px;
+  margin: 0 auto 100px;
+  padding: 45px;
+  text-align: center;
+  box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.2), 0 5px 5px 0 rgba(0, 0, 0, 0.24);
+}
+.profile-form {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+.profile-title {
+  font-size: 22px;
+  font-weight: 300;
+  color: #1a1a1a;
+  margin: 0 0 10px;
+}
+.profile-field {
+  display: flex;
+  flex-direction: column;
+  background: #f2f2f2;
+  padding: 15px;
+  text-align: left;
+  gap: 4px;
+}
+.profile-label {
+  font-size: 11px;
+  color: #888;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+.profile-value {
+  font-size: 16px;
+  color: #1a1a1a;
+  font-weight: 400;
+}
+.login-badge {
+  color: #4CAF50;
+  font-weight: 600;
+  font-size: 18px;
+  letter-spacing: 1px;
+}
+.form button {
+  font-family: "Roboto", sans-serif;
+  text-transform: uppercase;
+  outline: 0;
+  background: #4CAF50;
+  width: 100%;
+  border: 0;
+  padding: 15px;
+  color: #FFFFFF;
+  font-size: 14px;
+  transition: all 0.3s ease;
+  cursor: pointer;
+  margin-top: 5px;
+}
+.form button:hover,
+.form button:active,
+.form button:focus {
+  background: #43A047;
+}
+
