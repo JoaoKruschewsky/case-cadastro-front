@@ -1,4 +1,4 @@
 export const environment = {
   production: true,
-  apiUrl: 'manager-controller/v1',
+  apiUrl: 'https://case-cadastro-itau.onrender.com/manager-controller/v1',
 };
