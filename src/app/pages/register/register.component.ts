@@ -141,7 +141,8 @@ this.user.name = ValidatorsUtil.cleanName(this.user.name);
             }
             this.cepFound = false
             this.showError("Cep inválido")
-            return;
+            return; 
+            
           }
           this.cepFound = true
          this.address.logradouro = resp.logradouro;
